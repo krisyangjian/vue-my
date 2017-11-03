@@ -6,7 +6,9 @@
   "author": "YangJian",
   "license": "ISC",
   "devDependencies": {
-    "vue-loader": "^13.3.0"
+    "css-loader": "^0.28.7",
+    "vue-loader": "^13.3.0",
+    "vue-template-compiler": "^2.5.2"
   },
   "dependencies": {
     "vue": "^2.5.2",
