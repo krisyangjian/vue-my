@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
+  "scripts": {
+    "build": "webpack"
+  },
   "author": "YangJian",
   "license": "ISC",
   "devDependencies": {
