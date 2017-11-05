@@ -1,14 +1,20 @@
-import App from './v.vue';
-import Vue from 'vue';
+import App from './v.vue'
+import Vue from 'vue'
+// import 'element-ui/lib/theme-chalk/index.css'
+import { Button, Select } from 'element-ui'
+
+Vue.component(Button.name, Button)
 
 new Vue({
-   el: '#main',
-   render: h => h(App),
-  	data: {
-    a: 1
-  },
-  created: function () {
-    // `this` 指向 vm 实例
-    console.log('a is: ' + this.a)
-  }
+	el: '#main',
+    components: { App },
+    created: function () {
+        // `this` 指向 vm 实例
+        console.log('a is: ' + this.a)
+    },
+    template: '<App/>',
+    // render: h => h(App),
+    data: {
+    	a: 1
+    }
  });
