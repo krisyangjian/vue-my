@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.7",
-    "element-ui": "^2.0.3",
+    "element-ui": "../element",
     "vue-loader": "^13.3.0",
     "vue-template-compiler": "^2.5.2"
   },
