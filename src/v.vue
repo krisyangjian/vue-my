@@ -2,14 +2,14 @@
 	<div>
 		<div v-on:click="modifyMsg">
 	    	<p> {{ greeting }} world!</p>
-	    	<el-button type="primary">主要按钮</el-button>
-  	    	<el-button type="success">成功按钮</el-button>
-  	    	<el-button type="info">信息按钮</el-button>
-  	    	<el-button type="warning">警告按钮</el-button>
-  	    	<el-button type="danger">危险按钮</el-button>
-  		</div>
-  		<div><a-cp v-bind:todo="greeting"></a-cp></div>
-    </div>
+	    	<el-button :type="greeting">主要按钮</el-button>
+  	    <el-button type="success">成功按钮</el-button>
+  	    <el-button type="info">信息按钮</el-button>
+  	    <el-button type="warning">警告按钮</el-button>
+  	    <el-button type="danger">危险按钮</el-button>
+  	</div>
+  	<div><a-cp v-bind:todo="greeting"></a-cp></div>
+  </div>
 </template>
 
 <script>
@@ -24,13 +24,13 @@
 		name: "aBp",
 		data () {
 			return {
-				greeting: 'Hello krisyang'
+				greeting: 'button'
      		}
    		},
    		components: { aCp: A },
    		methods: {
    			modifyMsg: function() {
-   				this.greeting = "modify success!!!"
+   				this.greeting = "submit"
    			}
    		}
  	}
