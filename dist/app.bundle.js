@@ -25569,7 +25569,7 @@ var vm = new __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */]({
     	a: 1
     }
  });
-
+console.log(vm.$children.computedValue)
 // setTimeout(function(){
 // 	vm.$children[0].fullName = "fuck!!!!!!!!!!!!!"
 // }, 3000)
@@ -25648,6 +25648,8 @@ if (false) {(function () {
 //
 //
 //
+//
+//
 
 	
 	
@@ -25660,15 +25662,45 @@ if (false) {(function () {
 		name: "aBp",
 		data () {
 			return {
-				greeting: 'button'
-     		}
-   		},
+				greeting: 'button',
+        num: 1
+     	}
+   	},
+    // props: [],
    		components: { aCp: __WEBPACK_IMPORTED_MODULE_1__a_vue__["a" /* default */] },
    		methods: {
    			modifyMsg: function() {
-   				this.greeting = "submit"
-   			}
-   		}
+   				// this.greeting = "submit"
+       //    this.greeting = "sss";
+       //    this.$nextTick(function() {
+       //      this.greeting = "3333";
+       //    })
+       //    let a = 3;
+       //    let b = 4;
+       //    this.greeting = "45asd";
+       //    if(this.computedValue) {
+       //      console.log(this.computedValue);
+       //      // this.computedValue = "modify ÷computedValue";
+       //    } else {
+       //      console.log("noooooooo")
+       //    }
+          // console.log(this.num);
+          this.num += 1;
+   			},
+        functionValue: function() {
+          console.log("function exec...............")
+          return this.greeting;
+        },
+        handleItemClick() {
+          console.log('item click from parent')
+        }
+   		},
+      computed: {
+        computedValue: function() {
+          console.log("computed exec...............")
+          return this.greeting + 'computed!!!';
+        }
+      }
  	});
 
 
@@ -64922,7 +64954,20 @@ if (false) {(function () {
 				message: "aaaaaaaaaaaaaaa"
      		}
    		},
-   		props: ['todo']
+   		props: ['todo', 'paddingA'],
+   		methods: {
+   			handleClick() {
+   				console.log('item click from item');
+   				// this.$emit('itemClick', this);
+   			}
+   		},
+      computed: {
+        paddingStyle() {
+          // let padding = 20;
+
+          return {paddingLeft: "1000" + 'px'}
+        }
+      }
  	});
 
 
@@ -64935,7 +64980,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("div", [_vm._v(" A Vue " + _vm._s(_vm.todo) + " ")])])
+  return _c("div", [
+    _c("div", { style: [_vm.paddingStyle], on: { click: _vm.handleClick } }, [
+      _vm._v(" asdasdasdasdsadasdA Vue " + _vm._s(_vm.todo) + " ")
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -64979,7 +65028,20 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", [_c("a-cp", { attrs: { todo: _vm.greeting } })], 1)
+    _c(
+      "div",
+      [
+        _c("a-cp", {
+          attrs: { todo: _vm.greeting, paddingA: "100" },
+          on: { itemClick: _vm.handleItemClick }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", [_vm._v(" " + _vm._s(_vm.computedValue) + " ")]),
+    _vm._v(" "),
+    _c("div", [_vm._v(" " + _vm._s(_vm.functionValue()) + " ")])
   ])
 }
 var staticRenderFns = []

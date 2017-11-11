@@ -16,7 +16,7 @@ var vm = new Vue({
     	a: 1
     }
  });
-
+console.log(vm.$children.computedValue)
 // setTimeout(function(){
 // 	vm.$children[0].fullName = "fuck!!!!!!!!!!!!!"
 // }, 3000)
