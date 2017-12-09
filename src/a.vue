@@ -29,3 +29,9 @@
       }
  	}
 </script>
+<style lang="scss">
+  div {
+    background-color: $--background-color-head;
+  }
+  
+</style>
