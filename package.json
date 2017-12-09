@@ -10,13 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.7",
-<<<<<<< HEAD
-=======
-    "element-ui": "../element",
-    "node-sass": "^4.6.1",
-    "sass-loader": "^6.0.6",
-    "sass-resources-loader": "^1.3.1",
->>>>>>> ae4b1fff4003ce07c376216786fe2dcbaf104c1b
     "style-loader": "^0.19.0",
     "vue-loader": "^13.3.0",
     "vue-router": "^3.0.1",

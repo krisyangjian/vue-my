@@ -1,5 +1,5 @@
-import App from './v.vue'
-import Vue from 'vue'
+// import App from './v.vue'
+// import Vue from 'vue'
 // import 'element-ui/lib/theme-chalk/index.css'
 
 window.test = 1111111;
@@ -10,7 +10,7 @@ var vm = new Vue({
         // `this` 指向 vm 实例
         console.log('a is: ' + this.a)
     },
-    template: '<div class="sdsd"><app></app></div>',
+    template: '<div class="sdsd">{{ a }}</div>',
     // render: h => h(App),
     data: {
     	a: 1
