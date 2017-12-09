@@ -1,8 +1,8 @@
 import App from './v.vue'
 import Vue from 'vue'
-import 'element-ui/lib/theme-chalk/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'
 
-
+window.test = 1111111;
 var vm = new Vue({
 	el: '#main',
     components: { App },

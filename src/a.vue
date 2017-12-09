@@ -9,7 +9,7 @@
 		name: "aCp",
 		data () {
 			return {
-s
+
 				message: "aaaaaaaaaaaaaaa"
      		}
    		},
@@ -23,8 +23,8 @@ s
       computed: {
         paddingStyle() {
           // let padding = 20;
-
-          return {paddingLeft: paddingA + 'px'}
+          window.a = this;
+          return {paddingLeft: a.paddingA + 'px'}
         }
       }
  	}
