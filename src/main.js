@@ -3,23 +3,36 @@ import Vue from 'vue'
 import cvv from "./c.vue";
 import 'element-ui/lib/theme-chalk/index.css';
 import ElementUI from 'element-ui';
-import locale from 'element-ui/lib/locale/lang/en'
+import elocale from 'element-ui/lib/locale/lang/en'
+import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import VueI18n from 'vue-i18n';
 
-Vue.use(ElementUI, { locale });
+Vue.use(ElementUI);
 
 // Vue.component('c-cp', cvv);
 // import 'element-ui/lib/theme-chalk/index.css'
 Vue.component('app', App);
-// Vue.use(VueI18n);
 
-// const i18n = new VueI18n({
-//     locale: 'en',    // 语言标识
-//     //this.$i18n.locale // 通过切换locale的值来实现语言切换
-//     messages: {
-//       'en': require('./en')   // 中文语言包
-//     }
+var locales = {
+    en: {
+      message: {
+        hello: 'hello world'
+      }
+    },
+    ja: {
+      message: {
+        hello: 'こんにちは、世界'
+      }
+    }
+}
+// Vue.config.lang = 'en'
+Vue.use(VueI18n);
+// Object.keys(locales).forEach(function (lang) {
+//     Vue.locale(lang, locales[lang])
 // })
+Vue.config.lang = 'en';
+Vue.locale('ja', locales.ja)
+Vue.locale('en', locales.en)
 // i18n.locale = 'en';
 window.sss = Vue.component('c0', {
     props: ['todo'],
