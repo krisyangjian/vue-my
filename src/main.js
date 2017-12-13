@@ -1,11 +1,26 @@
 import App from './a.vue'
 import Vue from 'vue'
 import cvv from "./c.vue";
+import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui';
+import locale from 'element-ui/lib/locale/lang/en'
+import VueI18n from 'vue-i18n';
 
+Vue.use(ElementUI, { locale });
 
-Vue.component('c-cp', cvv);
+// Vue.component('c-cp', cvv);
 // import 'element-ui/lib/theme-chalk/index.css'
-Vue.component('app', App)
+Vue.component('app', App);
+// Vue.use(VueI18n);
+
+// const i18n = new VueI18n({
+//     locale: 'en',    // 语言标识
+//     //this.$i18n.locale // 通过切换locale的值来实现语言切换
+//     messages: {
+//       'en': require('./en')   // 中文语言包
+//     }
+// })
+// i18n.locale = 'en';
 window.sss = Vue.component('c0', {
     props: ['todo'],
     // created: function() {
@@ -15,13 +30,14 @@ window.sss = Vue.component('c0', {
 })
 var Child = {
     template: '<div>A custom component!</div>'
-  }
+}
 // window.test = 1111111;
 window.obj = {
     name: "yangjian"
 }
 window.vm = new Vue({
-	el: '#main',
+    el: '#main',
+    // i18n,
     // components: {
     //     'c-0' : Child
     //  },
@@ -33,6 +49,9 @@ window.vm = new Vue({
     // render: h => h(App),
     data: {
     	a: 9
+    },
+    mounted: function() {
+        console.log(this.$i18n)
     },
     computed: {
         sss: function() {
