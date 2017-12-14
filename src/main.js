@@ -64,7 +64,11 @@ window.vm = new Vue({
     	a: 9
     },
     mounted: function() {
-        console.log(this.$i18n)
+        console.log(this.$i18n);
+        var that = this;
+        setTimeout(function() {
+            that.a = 10;
+        }, 4000)
     },
     computed: {
         sss: function() {
@@ -72,6 +76,16 @@ window.vm = new Vue({
         }
     }
  });
+
+
+ window.vmObj = new Vue({data: {
+     b: 10
+ }})
+ vmObj.$watch("$data", function(var0, var1) {
+ }, { deep: true });
+ 
+
+
 //  window.vm2 = new Vue({
 // 	el: '#app',
 //     // components: { c-0 },

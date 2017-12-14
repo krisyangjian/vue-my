@@ -10229,6 +10229,10 @@ window.vm = new __WEBPACK_IMPORTED_MODULE_3_vue__["default"]({
     },
     mounted: function mounted() {
         console.log(this.$i18n);
+        var that = this;
+        setTimeout(function () {
+            that.a = 10;
+        }, 4000);
     },
     computed: {
         sss: function sss() {
@@ -10236,6 +10240,12 @@ window.vm = new __WEBPACK_IMPORTED_MODULE_3_vue__["default"]({
         }
     }
 });
+
+window.vmObj = new __WEBPACK_IMPORTED_MODULE_3_vue__["default"]({ data: {
+        b: 10
+    } });
+vmObj.$watch("$data", function (var0, var1) {}, { deep: true });
+
 //  window.vm2 = new Vue({
 // 	el: '#app',
 //     // components: { c-0 },
@@ -21699,7 +21709,7 @@ exports.clearImmediate = clearImmediate;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_script_index_0_bustCache_a_vue__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_dade816a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_a_vue__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_45c6ab58_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_a_vue__ = __webpack_require__(18);
 var disposed = false
 var normalizeComponent = __webpack_require__(4)
 /* script */
@@ -21716,13 +21726,13 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_script_index_0_bustCache_a_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_dade816a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_a_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_45c6ab58_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_a_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\a.vue"
+Component.options.__file = "src/a.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -21732,9 +21742,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-dade816a", Component.options)
+    hotAPI.createRecord("data-v-45c6ab58", Component.options)
   } else {
-    hotAPI.reload("data-v-dade816a", Component.options)
+    hotAPI.reload("data-v-45c6ab58", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21833,7 +21843,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-dade816a", esExports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-45c6ab58", esExports)
   }
 }
 
@@ -21843,7 +21853,7 @@ if (false) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_script_index_0_bustCache_c_vue__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_daa62366_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_c_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_45e2da5a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_c_vue__ = __webpack_require__(21);
 var disposed = false
 var normalizeComponent = __webpack_require__(4)
 /* script */
@@ -21860,13 +21870,13 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_script_index_0_bustCache_c_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_daa62366_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_c_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_5_0_vue_loader_lib_template_compiler_index_id_data_v_45e2da5a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_5_0_vue_loader_lib_selector_type_template_index_0_bustCache_c_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\c.vue"
+Component.options.__file = "src/c.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -21876,9 +21886,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-daa62366", Component.options)
+    hotAPI.createRecord("data-v-45e2da5a", Component.options)
   } else {
-    hotAPI.reload("data-v-daa62366", Component.options)
+    hotAPI.reload("data-v-45e2da5a", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21931,7 +21941,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-daa62366", esExports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-45e2da5a", esExports)
   }
 }
 
@@ -22212,6 +22222,7 @@ var Asset = function Asset(Vue, langVM) {
    */
 
   Vue.locale = function (id, definition, cb) {
+    debugger;
     if (definition === undefined) {
       // getter
       return langVM.locales[id];
@@ -23209,7 +23220,7 @@ var langVM; // singleton
 
 function plugin(Vue, opts) {
   if (opts === void 0) opts = {};
-  debugger;
+
   var version = Vue.version && Number(Vue.version.split('.')[0]) || -1;
 
   if (process.env.NODE_ENV !== 'production' && plugin.installed) {

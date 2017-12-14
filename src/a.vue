@@ -30,7 +30,7 @@ import Vue from 'vue';
    		// props: ['todo', 'paddingA'],
    		methods: {
    			open() {
-					 Vue.config.lang = 'ja'
+					 Vue.config.lang = 'ja';
 					//  console.log(this.$i18n)
 					// this.$i18n.locale = 'en';
    				// this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
