@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="b-c">
 		<div> b vue-c </div>
     </div>
 </template>
@@ -13,3 +13,8 @@
    		}
  	}
 </script>
+<style scoped>
+	.b-c {
+		margin-top: 10px;
+	}
+</style>

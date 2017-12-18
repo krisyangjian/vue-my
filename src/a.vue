@@ -1,8 +1,8 @@
 <template>
-	<div>
-		<div> asdasdasdasdsadasdA Vue {{ message }} </div>
+	<div class="c-p">
+		<div class="mes"> asdasdasdasdsadasdA Vue {{ message }} </div>
 		<el-button type="primary" @click="open">{{ $t("message.hello") }}</el-button>
-		<!-- <b-cp></b-cp> -->
+		<b-cp id="b-p"></b-cp>
 		<!-- <c-cp></c-cp> -->
   </div>
 </template>
@@ -11,7 +11,10 @@
 import Vue from 'vue';
 // import { t } from 'element-ui/lib/locale';
 // import Locale from 'element-ui/lib/mixins/locale';
-// import bvv from "./b.vue";
+import bvv from "./b.vue";
+import './a.css';
+
+const asssssss = () => {return 3+3;}
 // import cvv from "./c.vue";
 // Vue.component('b-cp', bvv);
 // import { Button } from 'element-ui';
@@ -24,9 +27,9 @@ import Vue from 'vue';
 				message: "aaaaaaaaaaaaaaa"
      	}
 		},
-    // components: {
-    //     'b-cp' : bvv
-    //  }
+    components: {
+        'b-cp' : bvv
+     },
    		// props: ['todo', 'paddingA'],
    		methods: {
    			open() {
@@ -50,10 +53,15 @@ import Vue from 'vue';
       // }
  	}
 </script>
-<!--
-<style>
-  div {
-    background-color: $--background-color-head;
-  }
-  
-</style>-->
+
+<style scoped>
+	.c-p {
+		margin-left: 100px;
+	}
+	.mes {
+		font-size: 18px;
+	}
+	#b-p {
+		margin-top: 100px;
+	}
+</style>
